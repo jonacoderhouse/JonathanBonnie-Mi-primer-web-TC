@@ -1,0 +1,1416 @@
+
+
+@import "colores";/*Nodulo importado*/
+@import "peluqueria";
+@import "juguetes";
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"roboto";
+}
+@font-face {
+    font-family:"roboto";
+    
+}
+
+body{
+    text-decoration: none;
+    list-style: none;
+
+}
+.imagen{
+    border-radius: 50px;
+    width: 250px;
+    height: 100px;
+    border-radius: 50px;
+
+}
+@keyframes logo{
+    0%{
+        transform: rotatey(0deg);
+    }
+    50%{
+        transform: rotatey(180deg);
+
+    }
+    75%{
+        transform: rotatey(180deg);
+    }
+    100%{
+        transform: rotatey(360deg);
+    }
+}
+
+/*HOME*/
+.main{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(18,1fr);
+    background-color: black;
+    width: 100%;
+    height: 1200px;
+
+    .boxmain{
+        grid-column: 3/10;
+        grid-row: 1/3;
+        font-family: roboto;
+        .somos{
+            font-size: 120px;
+            text-align: center;
+            transition: 1s;
+            color: antiquewhite;
+            &:hover{
+                transform: scale(1.2);
+                color: $color-texto;
+            } /*variable*/
+            
+        }
+        .maintexto{
+            margin-top: 20px;
+            font-size: 25px;
+            text-align: center;
+            color: antiquewhite;
+            &:hover{
+                color:$color-texto;
+            }/*variable*/
+            
+        }
+    }
+
+    
+    .conti2{
+        grid-column: 3/10;
+        grid-row: 9/15;
+    }
+    .boxmain3{
+        grid-column: 3/10;
+        grid-row: 19;
+        display: flex;
+        justify-content: center; /*FLEX*/
+
+        .logomain{
+            width: 350px;
+            border-radius: 100px;
+            animation-name: logomain;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-duration: 6s;
+            animation-delay: 2s;
+        }
+        @keyframes logomain{
+            0%{
+                transform: rotatey(0deg);
+            }
+            50%{
+                transform: rotatey(180deg);
+        
+            }
+            75%{
+                transform: rotatey(180deg);
+            }
+            100%{
+                transform: rotatey(360deg);
+            }
+        
+        }
+    }
+    
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "domicilio domicilio redes";
+    width: 100%;
+    height: 100px;
+    background-color: black;
+
+    .boxdomicilio{
+        grid-area:domicilio ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 50px;
+
+        .domifot{
+            display: flex;
+            align-items: center;
+            font-family: roboto;
+            font-size: 15px;
+            color: white;
+        }
+    
+    
+    }
+    
+    .footered{
+        grid-area: redes;
+        display: flex;
+        align-items: center;
+    
+    
+        .facebook{
+            transition: 2s;
+            margin: 10px;
+            &:hover{transform: scale(1.5);}
+        }
+        /*EXTEND*/
+        .instagram{
+            @extend .facebook;
+        }
+
+        .twiter{ 
+            @extend .facebook;
+        }
+    }
+    
+}
+
+
+/*PELUQUERIA*/
+
+.mainpelu{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(6,1fr);
+    width: 100%;
+    height: 100px;
+    background-color: #370853;
+}
+
+
+.boxpelu{
+    grid-column: 4/10;
+    grid-row: 2/4;
+}
+
+/*MIXIM*/
+.titupelu{
+    @include pelu(); 
+}
+
+/*MIXIM*/
+.textopelu{
+    @include textopelu();
+}
+
+.section{
+
+    display: grid;
+    grid-template-columns: repeat(14,1fr);
+    grid-template-rows: repeat(20,1fr);
+    background-color: black;
+    height: 600px;
+    width: 100%;
+    
+}
+
+
+.boxpelu1{
+    grid-column: 2/5;
+    grid-row: 6/10;
+    
+}
+.titulopro{
+    font-size: 35px;
+    font-family: roboto;
+    margin-bottom: 20px;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.textopelup{
+    font-family: roboto;
+    font-size: 18px;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.conti{
+    grid-column:7/12;
+    grid-row: 7/12;
+
+}
+.botton{
+    grid-column:3 ;
+    grid-row: 19;
+
+}
+/*ALIMENTOS*/
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    
+}
+.caja__main{
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    position: relative;
+    
+    
+    
+
+}
+.titulo__main{
+    font-size: 250%;
+    position: absolute;
+    top: 130px;
+    left: 150px;
+    font-family: roboto; 
+    color: white;
+    transition: 1s;
+    
+}
+.titulo__main:hover{
+    transform: scale(1.5);
+}
+.texto__texto{
+    position: absolute;
+    top: 135px; ;
+    left: 450px;
+    color: aliceblue;
+    font-size: 20px;
+    font-family: roboto;
+    transition: 1s;
+
+}
+.texto__texto:hover{
+    transform: scale(1.1);
+    
+}
+
+/* TIULO Y ARTICULO*/
+.contenedor2{
+    display: flex;
+    justify-content: center;
+    font-family: roboto;
+}
+
+.caja__articulo{
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    
+}
+
+.titulo__articulo{
+    font-size:30px ;
+    position: absolute;
+    left: 0px;
+    top: 50px;
+}
+
+.texto__articulo{
+    font-size: 20px;
+    position: absolute ;
+    top: 100px;  
+}
+.texto__articulo:hover{
+    color: rgb(128, 0, 255);
+}
+
+/*imagenes alimento*/
+
+.contenedor-img{
+    display: flex;
+    background-image: linear-gradient( 109.6deg,  rgba(209,0,116,1) 11.2%, rgba(110,44,107,1) 91.1% );}
+
+.caja__img{
+    width: 600px;
+    height: 300px;
+    position: relative;
+}
+
+.img__1{
+    position: absolute;
+    width: 150px;
+    left: 400px;
+    top: 0px;
+    animation-name:backInRight;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.caja__img1{
+    width: 500px;
+    height: 300px;
+    position: relative;
+    
+    }
+
+.img__2{
+    width: 150px;
+    position: absolute;
+    left: 150px;
+    top: 0px;
+    animation-name:backInLeft;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+
+/*JUEGUTES*/
+.mainjugue{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(19,1fr);
+    background-color: black;
+    width: 100%;
+    height: 1500px;
+}
+.boxjugue{
+    grid-column: 2/4;
+    grid-row: 3/7;
+    text-align: center;
+}
+/*MAPS*/
+.jueguete{ 
+    font-size: map-get($titulo-juguete, font-size );
+    font-family: map-get($titulo-juguete, font-family);
+    color: map-get($titulo-juguete, color);
+}
+/*MAPS*/
+.textjuegue{
+    font-size: map-get($text-juegue, font-size);
+    font-family: map-get($text-juegue, font-family);
+    color: map-get($text-juegue, color );
+}
+
+.card{
+    grid-column: 5/7;
+    grid-row: 3/6;
+}
+.card-img-top{
+    border-radius: 45px;
+    transition: 2s;
+}
+.card-img-top:hover{
+    transform: scale(1.1);
+    border: solid 5px blueviolet;
+}
+
+.img-2{
+    grid-column: 9/11;
+
+}
+
+.img-div{
+    grid-column: 4/8;
+    grid-row: 12/17;
+
+}
+.img-jugando{
+    width: 650px;
+    height: 500px;
+    border-radius: 50px;
+    border: solid 5px blueviolet;
+}
+
+.boxjugue2{
+    grid-column: 3/11;
+    grid-row:9/12 ;
+    height: 250px;
+    text-align: center;
+
+}
+
+.subtijugar{
+    font-size: 40px;
+    font-family: roboto;
+    animation-name:heartBeat;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    color: blueviolet;
+}
+
+.textjugar{
+    font-size: 25px;
+    font-family: roboto;
+    color: white;
+}
+
+
+
+
+/*FORMULARIO*/
+
+.titulo__c{
+    font-family: roboto;
+    font-size: 50px;
+    text-align: center;
+    
+}
+
+.caja__formulario{
+    width: 100%;
+    height: 700px;
+    position: relative;
+    font-family: roboto;
+    background-color:black;
+}
+.formulario__1{
+    position: absolute;
+    left:42%;
+    top: 50px;
+}
+
+
+.formulario__1 .formulario{
+    /*por herencia*/
+    margin-top: 10px;
+    font-size:20px;
+
+}
+
+.formulario__1 legend{
+    font-size: 35px;
+    margin-top: 15px;
+    
+}
+
+.formulario__1 textarea{
+    border-radius: 10px;
+    color: blueviolet;
+    border: solid 5px;
+    
+    
+}
+
+.img__log{
+    position: absolute;
+    left: 0px;
+    width: 40%;
+    height: 40%;
+    top: 350px;
+    animation-name: swing;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.formulario .imput:focus{
+    border: solid 5px blueviolet;
+}
+.formulario .email:invalid{
+    background-color: red;
+}
+.formulario .email:valid{
+    background-image: radial-gradient( circle 780.6px at 10% 20%,  rgba(133,255,189,1) 0%, rgba(255,251,125,1) 90.7% );
+    
+}
+.boton-enviar{
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    background-color: #370853;
+    border: solid 2px blueviolet;
+    }
+
+
+
+
+/*RESPONSIVE HOME Y PRODUCTO...TRABAJO ENTREGABLE*/
+
+/*HOME*/
+
+@media screen and (min-width: 350px) and (max-width: 540px){
+
+    
+    .main{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(6,1fr);
+        grid-template-areas: 
+        ". boxmain ."
+        ".boxmain."
+        ". . ."
+        " carru carru carru"
+        "carru carru carru"
+        "logom logom logom";
+
+
+
+        .boxmain{
+            grid-area: boxmain ;
+            .somos{
+                font-size: 45px;
+            }
+            .maintexto{
+                font-size: 15px;
+            }
+        
+        }
+        
+        .conti2{
+            grid-area: carru;
+        }
+    
+        .boxmain3{
+            grid-area: logom;
+            .logomain{
+                width: 200px;
+            }
+        }
+        
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas: "texto texto redes";
+
+        .boxdomicilio{
+            grid-area: texto;
+            .domifot{
+                font-size: 10px;
+            }
+        }
+        
+    
+        .footered{
+            grid-area: redes;
+            .facebook{
+                width: 25px;
+            }
+            .instagram{
+                width: 25px;
+            }
+            .twiter{
+                width: 25px;
+            }
+        }
+        
+
+    }
+}
+
+@media screen  and (min-width: 541px) and (max-width: 720px) {
+
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-template-areas: 
+    "boxmain boxmain boxmain"
+    "boxmain boxmain boxmain"
+    "carru carru carru"
+    "carru carru carru"
+    "none none none"
+    "logo logo logo"; 
+    
+    .boxmain{
+        grid-area: boxmain;
+        .somos{
+            font-size: 55px;
+        }
+        .maintexto{
+            font-size: 20px;
+        }
+    }
+    
+    
+    .conti2{
+        grid-area: carru;
+    }
+    
+    .boxmain3{
+        grid-area: logo;
+    }
+}
+
+}
+@media screen and (min-width: 
+        721px) and (max-width: 1250px){
+    
+.main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(7,1fr);
+    grid-template-areas: 
+    "box4 box4 box4"
+    "box4 box4 box4"
+    ". . ."
+    ". carru ."
+    ". . ."
+    "logo logo logo";
+
+    .boxmain{
+        grid-area: box4;
+        .somos{
+            font-size: 55px;
+        }
+        .maintexto{
+            font-size: 25px;
+        }
+    }
+    
+    .conti2{
+        grid-area: carru;
+    }
+    
+
+
+    .boxmain3{
+        grid-area: logo;
+    }
+
+}
+
+}   
+
+
+/*PELUQUERIA*/
+
+@media screen and (min-width: 350px) and (max-width: 550px){
+    .mainpelu{
+        display: grid;
+        height: 150px;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(8,1fr);
+        grid-template-areas: 
+        "box box box box"
+        "box box box box"
+        "texto texto texto texto"
+        "texto texto texto texto"
+        "texto texto texto texto"
+        ;
+}
+
+    .boxpelu{
+        grid-area: box;
+}
+    .titupelu{
+        margin-top: 10px;
+        font-size: 20px;}
+
+    .textopelu{
+    font-size: 12px;
+    grid-area: texto;
+    }
+    
+    .section{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(18,1fr);
+        grid-template-areas:
+        "box box box box box box"
+        "box box box box box box"
+        "box box box box box box"
+        "box box box box box box"
+        "box box box box box box"
+        ". . . . . ."
+        ". . . . . ."
+        ". . . . . ."
+        "box1 box1 box1 box1 box1 box1"
+        "box1 box1 box1 box1 box1 box1"
+        "box1 box1 box1 box1 box1 box1"
+        "box1 box1 box1 box1 box1 box1"
+        "box1 box1 box1 box1 box1 box1"
+        "box1 box1 box1 box1 box1 box1"
+        "box1 box1 box1 box1 box1 box1"
+        ". . . . . ."
+        ;
+    }
+
+    .boxpelu1{
+        grid-area: box;
+    }
+    .titulopro{
+        margin-top: 5px;
+        font-size: 18px;
+    }
+    .textopelup{
+        font-size: 15px;
+    }
+    
+    .conti{
+        grid-area: box1;
+    }
+    .img-rounded{
+        width: 100%;
+        height: 180px;
+    }
+    .botton{
+        grid-area: box3;
+        display: none;
+    }
+    
+
+    }
+
+@media  screen and (min-width: 551px) and (max-width:721px){
+    .mainpelu{
+        height: 150px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(5,1fr);
+        grid-template-areas:
+        "box box box box"
+        "box box box box"
+        "texto texto texto texto"
+        "texto texto texto texto";
+
+        }
+    
+
+    .boxpelu{
+        grid-area: box;
+    }
+    .titupelu{
+        font-size: 45px;
+    }
+    .textopelu{
+        font-size: 15px;
+        grid-area: texto;
+
+    }
+    
+    .section{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(18,1fr);
+        grid-template-areas:
+        "box box box box box box"
+        "box box box box box box"
+        "box box box box box box"
+        "box box box box box box"
+        "box box box box box box"
+        ". . . . . ."
+        ". . . . . ."
+        ". box1 box1 box1 box1 ."
+        ". box1 box1 box1 box1 ."
+        ". box1 box1 box1 box1 ."
+        ". box1 box1 box1 box1 ."
+        ". box1 box1 box1 box1 ."
+        ". box1 box1 box1 box1 ."
+        ". box1 box1 box1 box1 ."
+        ". box1 box1 box1 box1 ."
+        ". box1 box1 box1 box1 ."
+        ". . . . . ."
+        ;
+    }
+
+    .boxpelu1{
+        grid-area: box;
+    }
+    .titulopro{
+        margin-top: 5px;
+        font-size: 20px;
+    }
+    .textopelup{
+        font-size: 15px;
+    }
+    
+    .conti{
+        grid-area: box1;
+    }
+    .img-rounded{
+        width: 100%;
+        height: 200px;
+    }
+    .botton{
+        display: none;
+        
+        
+    }
+
+    
+}
+
+@media screen and (min-width: 722px) and (max-width: 1250px){
+    .mainpelu{
+        height: 250px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(6,1fr);
+        grid-template-areas:
+        ". . ."
+        "box3 box3 box3"
+        "box3 box3 box3"
+        "box3 box3 box3";
+        }
+
+    .boxpelu{
+        grid-area: box3;
+    }
+
+    .titupelu{
+        font-size: 45px;
+    }
+    .textopelu{
+        font-size: 20px;
+    }
+
+    .section{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(20,1fr);
+        grid-template-areas:
+        "box box box box box box"
+        "box box box box box box"
+        "box box box box box box"
+        "box box box box box box"
+        "box box box box box box"
+        ". . . . . ."
+        ". . . . . ."
+        ". . . . . ."
+        ". box1 box1 box1 box1 ."
+        ". box1 box1 box1 box1 ."
+        ". box1 box1 box1 box1 ."
+        ". box1 box1 box1 box1 ."
+        ". box1 box1 box1 box1 ."
+        ". box1 box1 box1 box1 ."
+        ". box1 box1 box1 box1 ."
+        ". box1 box1 box1 box1 ."
+        ". box1 box1 box1 box1 ."
+        ". . . . . ."
+        ;
+    }
+
+    .boxpelu1{
+        grid-area: box;
+    }
+    .titulopro{
+        font-size: 30px;
+    }
+    .textopelup{
+        font-size: 18px;
+    }
+    
+    .conti{
+        grid-area: box1;
+    }
+    .img-rounded{
+        width: 100%;
+        height: 280px;
+    }
+    .botton{
+        display: none;
+    }
+
+
+
+}
+
+
+/*ALIMENTOS*/
+@media screen and (min-width: 350px) and (max-width: 540px){
+
+    
+    .contenedor{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+        grid-template-areas: 
+        "box box box"
+        "box box box"
+        "box box box";
+    }
+    .caja__main{
+        grid-area: box;
+        position: relative;
+        text-align: center;
+
+    }
+    .titulo__main{
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top:15px;
+        left: 35%;
+
+    }
+    .texto__texto{
+        position: absolute;
+        left: 0px;
+        top: 15%;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .texto__texto:hover{
+        display: none;
+    }
+    .contenedor2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-template-areas:
+    ". . ."
+    "box2 box2 box2"
+    "box2 box2 box2"
+    "box2 box2 box2"
+    ". . .";
+    }
+    .caja__articulo{
+        grid-area: box2;
+        text-align: center;
+        position: relative;
+    
+    }
+    .titulo__articulo{
+        font-size: 18px;
+        position: absolute;
+        left: 0px;
+    
+    }
+    .texto__articulo{
+        font-size: 11px;
+    }
+    .contenedor-img{
+        display: none;
+    }
+
+    .conti3{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .card{
+        margin: 5px;
+    }
+    .conti5 h3{
+        font-size: 15px;
+    }
+    }
+
+    @media screen  and (min-width: 541px) and (max-width: 720px){
+            .contenedor{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(3,1fr);
+                grid-template-areas: 
+                "box box box"
+                "box box box"
+                "box box box"
+            }
+            .caja__main{
+                grid-area: box;
+                position: relative;
+                text-align: center;
+        
+            }
+            .titulo__main{
+                color: white;
+                font-size: 30px;
+                position: absolute;
+                top: 50px;
+                left:200px;
+                
+        
+            }
+            .texto__texto{
+                position: absolute;
+                left: 0px;
+                top: 100px;
+                font-size: 15px;
+                margin-top: 10px;
+            }
+            .texto__texto:hover{
+                display: none;
+            }
+            .contenedor2{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(6,1fr);
+                grid-template-areas: 
+                "box2 box2 box2"
+                "box2 box2 box2"
+                "box2 box2 box2"
+                ;
+    
+        
+            }
+            .caja__articulo{
+                grid-area: box2;
+                text-align: center;
+                position: relative;
+            
+            }
+            .titulo__articulo{
+                font-size: 28px;
+                position: absolute;
+                left: 110px;
+            
+            }
+            .texto__articulo{
+                font-size: 15px;
+            }
+            .contenedor-img{
+                display: none;
+            }
+            .conti3{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .card{
+                margin: 5px;
+            }
+        }
+    @media screen and (min-width: 721px) and (max-width: 1250px){
+        .contenedor{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,1fr);
+            grid-template-areas: 
+            "box box box"
+            "box box box"
+            "box box box";
+        }
+        .caja__main{
+            grid-area: box;
+            position: relative;
+            text-align: center;
+    
+        }
+        .titulo__main{
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            top: 50px;
+            left:275px;
+    
+        }
+        .texto__texto{
+            position: absolute;
+            left: 0px;
+            top: 100px;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .texto__texto:hover{
+            display: none;
+        }
+        .contenedor2{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(6,1fr);
+            grid-template-areas: 
+            "box2 box2 box2"
+            "box2 box2 box2"
+            "box2 box2 box2";
+
+    
+        }
+        .caja__articulo{
+            grid-area: box2;
+            text-align: center;
+            position: relative;
+        
+        }
+        .titulo__articulo{
+            font-size: 28px;
+            position: absolute;
+            left: 180px;
+        
+        }
+        .texto__articulo{
+            font-size: 20px;
+        }
+        .contenedor-img{
+            display: none;
+        }
+        .conti3{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card{
+            margin: 5px;
+        }
+    }
+
+/*JUEGUETES*/
+@media screen and (min-width: 350px) and (max-width: 540px){
+    .iconomenu{
+        display: block;
+    }
+
+    .mainjugue{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(14,1fr);
+        grid-template-areas:
+        ". . ."
+        "box box box"
+        ". . ."
+        "box3 box3 box3"
+        "box3 box3 box3"
+        ". . ."
+        ". . ."
+        ". . ."
+        "box2 box2 box2"
+        "box2 box2 box2"
+        ". . ."
+        ". card .";
+        
+    }
+    .boxjugue{
+        grid-area: box;
+
+    }
+    .jueguete{
+        font-size: 25px;
+    }
+    .textjuegue{
+        font-size: 15px;
+    }
+    .textjuegue:hover{
+        display: none;
+    }
+    .boxjugue2{
+        grid-area: box2 ;
+    }
+    .subtijugar{
+        font-size: 20px;
+    }
+    .textjugar{
+        font-size: 15px;
+    }
+
+
+    .img-div{
+        grid-area: box3;
+    }
+    .img-jugando{
+        width: 100%;
+        height: 300px;
+
+    }
+
+    .card{
+        grid-area: card;
+    
+    }
+    .img-2{
+        display: none;
+    }
+    
+}
+
+
+@media screen  and (min-width: 541px) and (max-width: 720px) {
+
+    .mainjugue{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(20,1fr);
+        grid-template-areas:
+        "box box box"
+        ". card ."
+        ". card ."
+        ". . ."
+        ". . ."
+        ". . ."
+        ". . ."
+        ". card1 ."
+        ". card1 ."
+        ". . ."
+        ". . . "
+        ". . ."
+        ". . ."
+        "box2 box2 box2"
+        "box2 box2 box2"
+        ". box3 ."
+        ". . ."
+        ". . . "
+        ". . ."
+        ". . .";
+    }
+    .boxjugue{
+        grid-area: box;
+
+    }
+    .jueguete{
+        font-size: 25px;
+    }
+    .textjuegue{
+        font-size: 15px;
+    }
+    .boxjugue2{
+        grid-area: box2 ;
+        }
+    .subtijugar{
+        font-size: 20px;
+    }
+    .textjugar{
+        font-size: 15px;
+    }
+
+
+    .img-div{
+        grid-area: box3;
+    }
+    .img-jugando{
+        width: 100%;
+        height: 300px;
+
+    }
+
+    .card{
+        grid-area: card;
+    
+    
+    }
+    .img-2{
+        grid-area: card1;
+        
+        
+    }
+
+}
+@media screen and (min-width: 721px) and (max-width: 1250px){
+    .mainjugue{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(20,1fr);
+        grid-template-areas:
+        "box box box"
+        ". card ."
+        ". card ."
+        ". . ."
+        ". . ."
+        ". . ."
+        ". . ."
+        ". card1 ."
+        ". card1 ."
+        ". . ."
+        ". . . "
+        ". . ."
+        ". . ."
+        "box2 box2 box2"
+        "box2 box2 box2"
+        ". box3 ."
+        ". . ."
+        ". . . "
+        ". . ."
+        ". . ."
+    }
+    .boxjugue{
+        grid-area: box;
+
+    }
+    .jueguete{
+        font-size: 25px;
+    }
+    .textjuegue{
+        font-size: 15px;
+    }
+    .boxjugue2{
+        grid-area: box2 ;
+    }
+    .subtijugar{
+        font-size: 20px;
+    }
+    .textjugar{
+        font-size: 15px;
+    }
+
+
+    .img-div{
+        grid-area: box3;
+    }
+    .img-jugando{
+        width: 100%;
+        height: 300px;
+
+    }
+
+    .card{
+        grid-area: card;
+    
+    }
+    .img-2{
+        grid-area: card1;
+    }
+}
+
+
+/*FORMULARIO*/
+@media screen and (min-width: 350px) and (max-width: 540px){
+    
+    .formulario__1{
+        position: absolute;
+        left: 50px;
+    }
+
+    .formulario__1 textarea{
+        width: 80%;
+    }
+
+    .formulario__1 .formulario{
+        font-size: 15px;
+    }
+
+    .formulario__1 legend{
+        font-size: 25px;
+    }
+
+.img__log{
+    display: none;
+}
+
+}  
+@media screen  and (min-width: 541px) and (max-width: 720px){
+    .formulario__1{
+        position: absolute;
+        left: 50px;
+    }
+
+    .formulario__1 textarea{
+        width: 80%;
+    }
+
+    .formulario__1 .formulario{
+        font-size: 15px;
+    }
+
+    .formulario__1 legend{
+        font-size: 25px;
+    }
+
+.img__log{
+    display: none;
+}
+}
+@media screen and (min-width: 721px) and (max-width: 1250px){
+    .formulario__1{
+        position: absolute;
+        left: 200px;
+    }
+
+    .formulario__1 textarea{
+        width: 80%;
+    }
+
+    .formulario__1 .formulario{
+        font-size: 20px;
+    }
+
+    .formulario__1 legend{
+        font-size: 30px;
+    }
+
+.img__log{
+    display: none;
+}
+
+}
+
+
+
+
+

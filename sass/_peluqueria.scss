@@ -1,0 +1,22 @@
+
+
+@mixin pelu {  
+    font-size: 70px;
+    font-family: roboto;
+    text-align: center;
+    animation-name:lightSpeedInRight;
+    animation-duration: 3s;
+    color: antiquewhite;
+    
+    
+}
+
+@mixin textopelu {
+    font-size: 20px;
+    font-family: roboto;
+    text-align: center;
+    margin-top: 25px;
+    color: antiquewhite;
+    
+    
+}
