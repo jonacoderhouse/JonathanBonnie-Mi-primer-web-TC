@@ -180,66 +180,67 @@ body{
     width: 100%;
     height: 100px;
     background-color: #370853;
-}
 
+    .boxpelu{
+        grid-column: 4/10;
+        grid-row: 2/4;
 
-.boxpelu{
-    grid-column: 4/10;
-    grid-row: 2/4;
-}
-
-/*MIXIM*/
+            /*MIXIM*/
 .titupelu{
     @include pelu(); 
 }
-
 /*MIXIM*/
 .textopelu{
     @include textopelu();
 }
 
-.section{
 
+
+    }
+
+}
+
+
+.section{
     display: grid;
     grid-template-columns: repeat(14,1fr);
     grid-template-rows: repeat(20,1fr);
     background-color: black;
     height: 600px;
     width: 100%;
+
+    .boxpelu1{
+        grid-column: 2/5;
+        grid-row: 6/10;
+
+        .titulopro{
+            font-size: 35px;
+            font-family: roboto;
+            margin-bottom: 20px;
+            text-align: center;
+            color: antiquewhite;
+        }
+
+        .textopelup{
+            font-family: roboto;
+            font-size: 18px;
+            text-align: center;
+            color: antiquewhite;
+        }
+    }
+    .conti{
+        grid-column:7/12;
+        grid-row: 7/12;
     
-}
-
-
-.boxpelu1{
-    grid-column: 2/5;
-    grid-row: 6/10;
+    }
+    .botton{
+        grid-column:3 ;
+        grid-row: 19;
     
-}
-.titulopro{
-    font-size: 35px;
-    font-family: roboto;
-    margin-bottom: 20px;
-    text-align: center;
-    color: antiquewhite;
-}
-
-.textopelup{
-    font-family: roboto;
-    font-size: 18px;
-    text-align: center;
-    color: antiquewhite;
-}
-
-.conti{
-    grid-column:7/12;
-    grid-row: 7/12;
+    }
 
 }
-.botton{
-    grid-column:3 ;
-    grid-row: 19;
 
-}
 /*ALIMENTOS*/
 
 .contenedor{
@@ -684,19 +685,22 @@ body{
         "texto texto texto texto"
         "texto texto texto texto"
         ;
-}
 
-    .boxpelu{
-        grid-area: box;
-}
-    .titupelu{
-        margin-top: 10px;
-        font-size: 20px;}
+        .boxpelu{
+            grid-area: box;
+            .titupelu{
+                margin-top: 10px;
+                font-size: 20px;}
+        
+            .textopelu{
+            font-size: 12px;
+            grid-area: texto;
+            }
 
-    .textopelu{
-    font-size: 12px;
-    grid-area: texto;
     }
+        
+}
+
     
     .section{
         display: grid;
@@ -720,33 +724,31 @@ body{
         "box1 box1 box1 box1 box1 box1"
         ". . . . . ."
         ;
-    }
-
-    .boxpelu1{
-        grid-area: box;
-    }
-    .titulopro{
-        margin-top: 5px;
-        font-size: 18px;
-    }
-    .textopelup{
-        font-size: 15px;
-    }
-    
-    .conti{
-        grid-area: box1;
-    }
-    .img-rounded{
-        width: 100%;
-        height: 180px;
-    }
-    .botton{
+        .boxpelu1{
+            grid-area: box;
+            .titulopro{
+                margin-top: 5px;
+                font-size: 18px;
+            }
+            .textopelup{
+                font-size: 15px;
+            }
+        }
+        .conti{
+            grid-area: box1;
+            .img-rounded{
+                width: 100%;
+                height: 180px;
+            }
+        }
+            .botton{
         grid-area: box3;
         display: none;
     }
     
 
     }
+}
 
 @media  screen and (min-width: 551px) and (max-width:721px){
     .mainpelu{
@@ -760,21 +762,23 @@ body{
         "texto texto texto texto"
         "texto texto texto texto";
 
+        .boxpelu{
+            grid-area: box;
+
+            .titupelu{
+                font-size: 45px;
+            }
+            .textopelu{
+                font-size: 15px;
+                grid-area: texto;
+        
+            }
+            
         }
+
+}
     
 
-    .boxpelu{
-        grid-area: box;
-    }
-    .titupelu{
-        font-size: 45px;
-    }
-    .textopelu{
-        font-size: 15px;
-        grid-area: texto;
-
-    }
-    
     .section{
         display: grid;
         grid-template-columns: repeat(6,1fr);
@@ -798,33 +802,35 @@ body{
         ". box1 box1 box1 box1 ."
         ". . . . . ."
         ;
-    }
 
-    .boxpelu1{
-        grid-area: box;
-    }
-    .titulopro{
-        margin-top: 5px;
-        font-size: 20px;
-    }
-    .textopelup{
-        font-size: 15px;
-    }
-    
-    .conti{
-        grid-area: box1;
-    }
-    .img-rounded{
-        width: 100%;
-        height: 200px;
-    }
-    .botton{
-        display: none;
-        
-        
-    }
+        .boxpelu1{
+            grid-area: box;
 
+            .titulopro{
+                margin-top: 5px;
+                font-size: 20px;
+            }
+            .textopelup{
+                font-size: 15px;
+            }
+            
+        }
+        .conti{
+            grid-area: box1;
+            .img-rounded{
+                width: 100%;
+                height: 200px;
+            }
+        }
+        .botton{
+            display: none;
+            
+            
+        }
     
+}
+
+
 }
 
 @media screen and (min-width: 722px) and (max-width: 1250px){
@@ -838,18 +844,22 @@ body{
         "box3 box3 box3"
         "box3 box3 box3"
         "box3 box3 box3";
+
+
+        .boxpelu{
+            grid-area: box3;
+
+            .titupelu{
+                font-size: 45px;
+            }
+            .textopelu{
+                font-size: 20px;
+            }
         }
+    
+}
 
-    .boxpelu{
-        grid-area: box3;
-    }
 
-    .titupelu{
-        font-size: 45px;
-    }
-    .textopelu{
-        font-size: 20px;
-    }
 
     .section{
         display: grid;
@@ -875,29 +885,34 @@ body{
         ". box1 box1 box1 box1 ."
         ". . . . . ."
         ;
-    }
 
-    .boxpelu1{
-        grid-area: box;
-    }
-    .titulopro{
-        font-size: 30px;
-    }
-    .textopelup{
-        font-size: 18px;
-    }
+        .boxpelu1{
+            grid-area: box;
+
+            .titulopro{
+                font-size: 30px;
+            }
+            .textopelup{
+                font-size: 18px;
+            }
+        }
+        .conti{
+            grid-area: box1;
+
+            .img-rounded{
+                width: 100%;
+                height: 280px;
+            }
+        }
+
+        .botton{
+            display: none;
+        }
     
-    .conti{
-        grid-area: box1;
-    }
-    .img-rounded{
-        width: 100%;
-        height: 280px;
-    }
-    .botton{
-        display: none;
-    }
 
+
+        
+    }
 
 
 }

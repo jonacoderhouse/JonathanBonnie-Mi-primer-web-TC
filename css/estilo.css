@@ -151,14 +151,13 @@ body {
   height: 100px;
   background-color: #370853;
 }
-
-.boxpelu {
+.mainpelu .boxpelu {
   grid-column: 4/10;
   grid-row: 2/4;
+  /*MIXIM*/
+  /*MIXIM*/
 }
-
-/*MIXIM*/
-.titupelu {
+.mainpelu .boxpelu .titupelu {
   font-size: 70px;
   font-family: roboto;
   text-align: center;
@@ -166,9 +165,7 @@ body {
   animation-duration: 3s;
   color: antiquewhite;
 }
-
-/*MIXIM*/
-.textopelu {
+.mainpelu .boxpelu .textopelu {
   font-size: 20px;
   font-family: roboto;
   text-align: center;
@@ -184,33 +181,28 @@ body {
   height: 600px;
   width: 100%;
 }
-
-.boxpelu1 {
+.section .boxpelu1 {
   grid-column: 2/5;
   grid-row: 6/10;
 }
-
-.titulopro {
+.section .boxpelu1 .titulopro {
   font-size: 35px;
   font-family: roboto;
   margin-bottom: 20px;
   text-align: center;
   color: antiquewhite;
 }
-
-.textopelup {
+.section .boxpelu1 .textopelup {
   font-family: roboto;
   font-size: 18px;
   text-align: center;
   color: antiquewhite;
 }
-
-.conti {
+.section .conti {
   grid-column: 7/12;
   grid-row: 7/12;
 }
-
-.botton {
+.section .botton {
   grid-column: 3;
   grid-row: 19;
 }
@@ -588,17 +580,14 @@ body {
     grid-template-rows: repeat(8, 1fr);
     grid-template-areas: "box box box box" "box box box box" "texto texto texto texto" "texto texto texto texto" "texto texto texto texto";
   }
-
-  .boxpelu {
+  .mainpelu .boxpelu {
     grid-area: box;
   }
-
-  .titupelu {
+  .mainpelu .boxpelu .titupelu {
     margin-top: 10px;
     font-size: 20px;
   }
-
-  .textopelu {
+  .mainpelu .boxpelu .textopelu {
     font-size: 12px;
     grid-area: texto;
   }
@@ -609,30 +598,24 @@ body {
     grid-template-rows: repeat(18, 1fr);
     grid-template-areas: "box box box box box box" "box box box box box box" "box box box box box box" "box box box box box box" "box box box box box box" ". . . . . ." ". . . . . ." ". . . . . ." "box1 box1 box1 box1 box1 box1" "box1 box1 box1 box1 box1 box1" "box1 box1 box1 box1 box1 box1" "box1 box1 box1 box1 box1 box1" "box1 box1 box1 box1 box1 box1" "box1 box1 box1 box1 box1 box1" "box1 box1 box1 box1 box1 box1" ". . . . . .";
   }
-
-  .boxpelu1 {
+  .section .boxpelu1 {
     grid-area: box;
   }
-
-  .titulopro {
+  .section .boxpelu1 .titulopro {
     margin-top: 5px;
     font-size: 18px;
   }
-
-  .textopelup {
+  .section .boxpelu1 .textopelup {
     font-size: 15px;
   }
-
-  .conti {
+  .section .conti {
     grid-area: box1;
   }
-
-  .img-rounded {
+  .section .conti .img-rounded {
     width: 100%;
     height: 180px;
   }
-
-  .botton {
+  .section .botton {
     grid-area: box3;
     display: none;
   }
@@ -645,16 +628,13 @@ body {
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: "box box box box" "box box box box" "texto texto texto texto" "texto texto texto texto";
   }
-
-  .boxpelu {
+  .mainpelu .boxpelu {
     grid-area: box;
   }
-
-  .titupelu {
+  .mainpelu .boxpelu .titupelu {
     font-size: 45px;
   }
-
-  .textopelu {
+  .mainpelu .boxpelu .textopelu {
     font-size: 15px;
     grid-area: texto;
   }
@@ -665,30 +645,24 @@ body {
     grid-template-rows: repeat(18, 1fr);
     grid-template-areas: "box box box box box box" "box box box box box box" "box box box box box box" "box box box box box box" "box box box box box box" ". . . . . ." ". . . . . ." ". box1 box1 box1 box1 ." ". box1 box1 box1 box1 ." ". box1 box1 box1 box1 ." ". box1 box1 box1 box1 ." ". box1 box1 box1 box1 ." ". box1 box1 box1 box1 ." ". box1 box1 box1 box1 ." ". box1 box1 box1 box1 ." ". box1 box1 box1 box1 ." ". . . . . .";
   }
-
-  .boxpelu1 {
+  .section .boxpelu1 {
     grid-area: box;
   }
-
-  .titulopro {
+  .section .boxpelu1 .titulopro {
     margin-top: 5px;
     font-size: 20px;
   }
-
-  .textopelup {
+  .section .boxpelu1 .textopelup {
     font-size: 15px;
   }
-
-  .conti {
+  .section .conti {
     grid-area: box1;
   }
-
-  .img-rounded {
+  .section .conti .img-rounded {
     width: 100%;
     height: 200px;
   }
-
-  .botton {
+  .section .botton {
     display: none;
   }
 }
@@ -700,16 +674,13 @@ body {
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas: ". . ." "box3 box3 box3" "box3 box3 box3" "box3 box3 box3";
   }
-
-  .boxpelu {
+  .mainpelu .boxpelu {
     grid-area: box3;
   }
-
-  .titupelu {
+  .mainpelu .boxpelu .titupelu {
     font-size: 45px;
   }
-
-  .textopelu {
+  .mainpelu .boxpelu .textopelu {
     font-size: 20px;
   }
 
@@ -719,29 +690,23 @@ body {
     grid-template-rows: repeat(20, 1fr);
     grid-template-areas: "box box box box box box" "box box box box box box" "box box box box box box" "box box box box box box" "box box box box box box" ". . . . . ." ". . . . . ." ". . . . . ." ". box1 box1 box1 box1 ." ". box1 box1 box1 box1 ." ". box1 box1 box1 box1 ." ". box1 box1 box1 box1 ." ". box1 box1 box1 box1 ." ". box1 box1 box1 box1 ." ". box1 box1 box1 box1 ." ". box1 box1 box1 box1 ." ". box1 box1 box1 box1 ." ". . . . . .";
   }
-
-  .boxpelu1 {
+  .section .boxpelu1 {
     grid-area: box;
   }
-
-  .titulopro {
+  .section .boxpelu1 .titulopro {
     font-size: 30px;
   }
-
-  .textopelup {
+  .section .boxpelu1 .textopelup {
     font-size: 18px;
   }
-
-  .conti {
+  .section .conti {
     grid-area: box1;
   }
-
-  .img-rounded {
+  .section .conti .img-rounded {
     width: 100%;
     height: 280px;
   }
-
-  .botton {
+  .section .botton {
     display: none;
   }
 }
