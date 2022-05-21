@@ -194,8 +194,6 @@ body{
     @include textopelu();
 }
 
-
-
     }
 
 }
@@ -845,7 +843,6 @@ body{
         "box3 box3 box3"
         "box3 box3 box3";
 
-
         .boxpelu{
             grid-area: box3;
 
@@ -908,12 +905,8 @@ body{
         .botton{
             display: none;
         }
-    
-
-
         
     }
-
 
 }
 
@@ -1149,11 +1142,7 @@ body{
     }
 
 /*JUEGUETES*/
-@media screen and (min-width: 350px) and (max-width: 540px){
-    .iconomenu{
-        display: block;
-    }
-
+    @media screen and (min-width: 350px) and (max-width: 540px){
     .mainjugue{
         display: grid;
         grid-template-columns: repeat(3,1fr);
